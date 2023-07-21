@@ -468,3 +468,228 @@ a.navbar-brand {
 .container-redes-footer {
   justify-content: end;
 }
+
+.modal-full {
+  position: fixed;
+  inset: 0;
+  padding: 50px;
+  background-color: var(--color-white);
+  z-index: 9990;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.m-header {
+  padding-bottom: 20px;
+}
+
+.m-main {
+  flex: 1;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.m-main::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.m-main::-webkit-scrollbar-thumb {
+  background: var(--color-white);
+}
+
+.m-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.etapas {
+  display: flex;
+}
+
+.etapa {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.etapa::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  margin-left: 55px;
+  background-color: var(--color-separate);
+}
+
+.etapa:last-child::before {
+  content: none;
+}
+
+.etapa.active,
+.etapa.active:before {
+  background-color: var(--color-primary);
+}
+
+.title-carrinho {
+  font-size: 20px;
+  color: var(--color-black);
+}
+
+.modal-full .item-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
+  border-bottom: 1px solid var(--color-separate);
+}
+
+.modal-full .item-carrinho:last-child {
+  border-bottom: none;
+}
+
+.modal-full .img-produto img {
+  width: 100px;
+  border-radius: 11px;
+}
+
+.modal-full .dados-produto {
+  flex: 1;
+  padding: 0px 25px 0px 25px;
+}
+
+.modal-full .title-produto {
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0px;
+  color: var(--color-black);
+}
+
+.modal-full .price-produto {
+  font-size: 24px;
+  margin-bottom: 0px;
+  color: var(--color-primary);
+}
+
+.modal-full .add-carrinho {
+  height: 30px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-remove {
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-left: 15px;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border: 2px solid var(--color-red);
+}
+
+.container-total {
+  padding-top: 20px;
+  border-top: 1px solid var(--color-separate);
+}
+
+.container-total .text-entrega {
+  color: var(--color-separate);
+}
+
+.container-total .text-total {
+  font-size: 20px;
+  margin-top: 10px;
+  color: var(--color-black);
+}
+
+.container-total .valor-total {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.form-control {
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 20px;
+  color: var(--color-black) !important;
+  background-color: var(--color-white);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: none !important;
+}
+
+select.form-control {
+  height: 60px !important;
+}
+
+.container-cep .form-control {
+  padding-right: 75px;
+}
+
+.container-cep .btn {
+  position: absolute;
+  right: 25px;
+  top: 38px;
+}
+
+.img-produto-resumo img {
+  width: 50px;
+  border-radius: 11px;
+}
+
+.item-carrinho.resumo {
+  padding: 10px 0px 10px 0px;
+}
+
+.title-produto-resumo {
+  font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0px;
+  color: var(--color-black);
+}
+
+.price-produto-resumo {
+  font-size: 16px;
+  margin-bottom: 0px;
+  color: var(--color-primary);
+}
+
+.quantidade-produto-resumo {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: var(--color-black);
+}
+
+.img-map {
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  color: var(--color-black);
+  background-color: var(--color-secondary);
+}
+
+.text-endereco {
+  margin-bottom: 0px;
+  color: var(--color-black);
+}
+
+.cidade-endereco {
+  margin-bottom: 0px;
+}
