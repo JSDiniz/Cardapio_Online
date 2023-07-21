@@ -482,9 +482,232 @@
       </section>
     </footer>
 
+    <div class="modal-full" id="odal-carrinho hidden">
+      <section class="m-header">
+        <div class="container">
+          <a class="btn btn-white btn-sm float-right"> Fechar </a>
+          <div class="etapas">
+            <div class="etapa etapa1 active">1</div>
+            <div class="etapa etapa2 active">2</div>
+            <div class="etapa etapa3">3</div>
+          </div>
+          <p class="title-carrinho mt-4">
+            <strong id="lbl-titulo-etapa">Seu carrinho:</strong>
+          </p>
+        </div>
+      </section>
+      <section class="m-main">
+        <div class="container">
+          <div id="itens-carrinho" class="row mr-0 ml-0 hidden">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img
+                  src="./img//cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg"
+                />
+              </div>
+
+              <div class="dados-produto">
+                <p class="title-produto">Nome do Produto<strong></strong></p>
+                <p class="price-produto">R$ 149,90<strong></strong></p>
+              </div>
+
+              <div class="add-carrinho">
+                <span class="btn-menos">
+                  <i class="fas fa-minus"></i>
+                </span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <span class="btn btn-remove">
+                  <i class="fa fa-times"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="local-entrega" class="row mr-0 ml-0 hidden">
+            <div class="col-4">
+              <div class="form-group container-cep">
+                <label>CEP:</label>
+                <input type="text" id="text-cep" class="form-control" />
+                <a class="btn btn-yellow btn-sm">
+                  <i class="fa fa-search"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-8"></div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label>Endereço:</label>
+                <input type="text" id="text-endereco" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="form-group">
+                <label>Bairro:</label>
+                <input type="text" id="text-bairro" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="form-group">
+                <label>Número:</label>
+                <input type="text" id="text-numero" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label>Cidade:</label>
+                <input type="text" id="text-cidade" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="form-group">
+                <label>Complemento:</label>
+                <input type="text" id="text-complemento" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="form-group">
+                <label>UF:</label>
+                <select id="ddluf" class="form-control">
+                  <option value="-1">...</option>
+                  <option value="AC">AC</option>
+                  <option value="AL">AL</option>
+                  <option value="AP">AP</option>
+                  <option value="AM">AM</option>
+                  <option value="BA">BA</option>
+                  <option value="CE">CE</option>
+                  <option value="DF">DF</option>
+                  <option value="ES">ES</option>
+                  <option value="GO">GO</option>
+                  <option value="MA">MA</option>
+                  <option value="MT">MT</option>
+                  <option value="MS">MS</option>
+                  <option value="MG">MG</option>
+                  <option value="PA">PA</option>
+                  <option value="PB">PB</option>
+                  <option value="PR">PR</option>
+                  <option value="PE">PE</option>
+                  <option value="PI">PI</option>
+                  <option value="RJ">RJ</option>
+                  <option value="RN">RN</option>
+                  <option value="RS">RS</option>
+                  <option value="RO">RO</option>
+                  <option value="RR">RR</option>
+                  <option value="SC">SC</option>
+                  <option value="SP">SP</option>
+                  <option value="SE">SE</option>
+                  <option value="TO">TO</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div id="resumo-carrinho" class="row mr-0 ml-0">
+            <div class="col-12">
+              <p class="title-carrinho mt-4">
+                <strong>Itens do pedido:</strong>
+              </p>
+            </div>
+
+            <div class="col-12">
+              <div class="row" id="lista-itens-resumo">
+                <div class="col-12 item-carrinho resumo">
+                  <div class="img-produto-resumo">
+                    <img
+                      src="./img//cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg"
+                    />
+                  </div>
+
+                  <div class="dados-produto">
+                    <p class="title-produto-resumo">
+                      Nome do Produto<strong></strong>
+                    </p>
+                    <p class="price-produto-resumo">
+                      R$ 100,00<strong></strong>
+                    </p>
+                  </div>
+                  <p class="quantidade-produto-resumo">x <span>3</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <p class="title-carrinho mt-4">
+                <strong>Local da entrega:</strong>
+              </p>
+            </div>
+
+            <div class="col-12 item-carrinho resumo">
+              <div class="img-map">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <div class="dados-produto">
+                <p class="text-endereco">
+                  <strong id="resumo-endereco"
+                    >Rua test, 200, bairro test</strong
+                  >
+                </p>
+                <p class="cidade-endereco" id="cidade-endereco">
+                  Cidade-SP / 14711-000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="m-footer">
+        <div class="container">
+          <div class="container-total text-right mb-4">
+            <p class="mb-0">
+              <span>Subtotal:</span>
+              <span id="ibl-subTotal">R$ 95,00</span>
+            </p>
+
+            <p class="mb-0 text-entrega">
+              <span><i class="fas fa-motorcycle"></i> Entrega:</span>
+              <span id="ibl-valor-entrega">+ R$ 5,00</span>
+            </p>
+
+            <p class="mb-0 text-total">
+              <span><strong>Total:</strong></span>
+              <span class="valor-total" id="ibl-valor-total"
+                ><strong>R$ 100,00</strong></span
+              >
+            </p>
+          </div>
+
+          <a class="btn btn-yellow float-right" id="btn-etapa-pedido"
+            >Continuar</a
+          >
+
+          <a class="btn btn-yellow float-right hidden" id="btn-etapa-endereco"
+            >Revisar pedido</a
+          >
+
+          <a class="btn btn-yellow float-right hidden" id="btn-etapa-resumo"
+            >Enviar pedido</a
+          >
+
+          <a class="btn btn-white float-right mr-3 hidden" id="btn-voltar"
+            >Voltar</a
+          >
+        </div>
+      </section>
+    </div>
+
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/modernizr-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/dados.js"></script>
   </body>
 </html>
